@@ -1,0 +1,10 @@
+.gradle/
+eclipse/
+gradle/
+gradlew
+gradlew.bat
+letsmod2.iml
+letsmod2.ipr
+letsmod2.iws
+out/
+
