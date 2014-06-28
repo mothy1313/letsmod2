@@ -2,17 +2,18 @@ package com.mothy.letsmod2
 
 
 import com.mothy.letsmod2.proxy.IProxy
+import com.mothy.letsmod2.reference.Reference
 import cpw.mods.fml.common.{SidedProxy, Mod}
 import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializationEvent, FMLInitializationEvent}
 
-@Mod(name = "Lets Mod 2", modid = "letsmod2", version = "1.7.2-1.0", modLanguage = "scala")
-class Letsmod2 {
+@Mod(modid = Reference.MODID , name = Reference.MODNAME, version = Reference.VERSION, modLanguage = Reference.MODLANG)
+object Letsmod2 {
 
   @Mod.Instance("letsmod2")
-  val instance: Letsmod2
+  var instance = Letsmod2
 
   @SidedProxy(clientSide = "com.mothy.letsmod2.proxy.ClientProxy", serverSide = "com.mothy.letsmod2.proxy.ServerProxy")
-  val proxy: IProxy
+  var proxy: IProxy = null
 
   @Mod.EventHandler
   def preInit(event: FMLPreInitializationEvent){
