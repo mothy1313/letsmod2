@@ -8,6 +8,9 @@ import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializati
 @Mod(name = "Lets Mod 2", modid = "letsmod2", version = "1.7.2-1.0", modLanguage = "scala")
 object Letsmod2 {
 
+  @Mod.Instance("letsmod2")
+  val instance = Letsmod2
+
   @EventHandler
   def preInit(event: FMLPreInitializationEvent){
 
