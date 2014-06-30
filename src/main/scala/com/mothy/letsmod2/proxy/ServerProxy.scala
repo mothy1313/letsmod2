@@ -1,6 +1,6 @@
 package com.mothy.letsmod2.proxy
 
 
-object ServerProxy extends IProxy {
+class ServerProxy extends CommonProxy {
 
 }
