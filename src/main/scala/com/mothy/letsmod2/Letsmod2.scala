@@ -9,10 +9,10 @@ import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializati
 @Mod(modid = Reference.MODID , name = Reference.MODNAME, version = Reference.VERSION, modLanguage = Reference.MODLANG)
 object Letsmod2 {
 
-  @Mod.Instance("letsmod2")
+  @Mod.Instance(Reference.MODID)
   var instance = Letsmod2
 
-  @SidedProxy(clientSide = "com.mothy.letsmod2.proxy.ClientProxy", serverSide = "com.mothy.letsmod2.proxy.ServerProxy")
+  @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS ,serverSide = Reference.SERVER_PROXY_CLASS)
   var proxy: IProxy = null
 
   @Mod.EventHandler
