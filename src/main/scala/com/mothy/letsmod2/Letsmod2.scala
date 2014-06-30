@@ -1,6 +1,7 @@
 package com.mothy.letsmod2
 
 
+import com.mothy.letsmod2.configuration.ConfigurationHandler
 import com.mothy.letsmod2.proxy.IProxy
 import com.mothy.letsmod2.reference.Reference
 import cpw.mods.fml.common.{SidedProxy, Mod}
@@ -18,6 +19,7 @@ object Letsmod2 {
   @Mod.EventHandler
   def preInit(event: FMLPreInitializationEvent){
 
+    ConfigurationHandler.init(event.getSuggestedConfigurationFile)
 
   }
 
