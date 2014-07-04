@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Level
 object LogHelper {
 
   def log(logLevel: Level, obj: Object): Unit = {
-    FMLLog.log(Reference.MODID, logLevel, "[" + Reference.MODID + "] " + obj.toString)
+    FMLLog.log(Reference.ModId, logLevel, "[" + Reference.ModId + "] " + obj.toString)
   }
 
   def all(obj: Object) = {log(Level.ALL, obj)}

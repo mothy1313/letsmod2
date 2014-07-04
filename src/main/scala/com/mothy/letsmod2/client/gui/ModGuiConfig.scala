@@ -10,7 +10,7 @@ import net.minecraftforge.common.config.{Configuration, ConfigElement}
 
 class ModGuiConfig(guiScreen: GuiScreen) extends GuiConfig(guiScreen,
     new ConfigElement[Any](ConfigurationHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements,
-    Reference.MODID,
+    Reference.ModId,
     false,
     false,
     GuiConfig.getAbridgedConfigPath(ConfigurationHandler.configuration.toString)

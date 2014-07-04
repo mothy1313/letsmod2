@@ -7,14 +7,14 @@ import com.mothy.letsmod2.utility.LogHelper
 import cpw.mods.fml.common.{FMLCommonHandler, SidedProxy, Mod}
 import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializationEvent, FMLInitializationEvent}
 
-@Mod(modid = Reference.MODID , name = Reference.MODNAME, version = Reference.VERSION, modLanguage = Reference.MODLANG,
+@Mod(modid = Reference.ModId , name = Reference.ModName, version = Reference.Version, modLanguage = Reference.ModLang,
      guiFactory = Reference.GuiFactoryClass)
 object Letsmod2 {
 
-  @Mod.Instance(Reference.MODID)
+  @Mod.Instance(Reference.ModId)
   var instance = Letsmod2
 
-  @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS ,serverSide = Reference.SERVER_PROXY_CLASS)
+  @SidedProxy(clientSide = Reference.ClientProxyClass ,serverSide = Reference.ServerProxyClass)
   var proxy: IProxy = null
 
   @Mod.EventHandler

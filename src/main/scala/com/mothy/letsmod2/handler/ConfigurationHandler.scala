@@ -26,7 +26,7 @@ object ConfigurationHandler {
   @SubscribeEvent
   def onConfigurationChangedEvent(event: OnConfigChangedEvent):Unit = {
 
-    if (event.modID == Reference.MODID){
+    if (event.modID == Reference.ModId){
       loadConfiguration
     }
 
