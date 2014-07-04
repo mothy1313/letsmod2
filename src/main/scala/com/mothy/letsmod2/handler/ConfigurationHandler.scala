@@ -16,7 +16,10 @@ object ConfigurationHandler {
 
   def init(configFile: File) {
 
-    if (configuration == null) configuration = new Configuration(configFile)
+    if (configuration == null){
+      configuration = new Configuration(configFile)
+      loadConfiguration
+    }
 
   }
 
@@ -29,7 +32,7 @@ object ConfigurationHandler {
 
   }
 
-  def loadConfiguration {
+  private def loadConfiguration {
 
     testValue = configuration.get(Configuration.CATEGORY_GENERAL,"configValue", true, "Config value").getBoolean(true)
 
