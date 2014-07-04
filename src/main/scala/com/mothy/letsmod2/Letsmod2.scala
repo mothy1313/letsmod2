@@ -1,13 +1,13 @@
 package com.mothy.letsmod2
 
-
-import com.mothy.letsmod2.configuration.ConfigurationHandler
+import com.mothy.letsmod2.handler.ConfigurationHandler
 import com.mothy.letsmod2.proxy.IProxy
 import com.mothy.letsmod2.reference.Reference
 import cpw.mods.fml.common.{SidedProxy, Mod}
 import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializationEvent, FMLInitializationEvent}
 
-@Mod(modid = Reference.MODID , name = Reference.MODNAME, version = Reference.VERSION, modLanguage = Reference.MODLANG)
+@Mod(modid = Reference.MODID , name = Reference.MODNAME, version = Reference.VERSION, modLanguage = Reference.MODLANG,
+     guiFactory = Reference.GuiFactoryClass)
 object Letsmod2 {
 
   @Mod.Instance(Reference.MODID)

@@ -9,6 +9,7 @@ object Reference {
   final val MODLANG = "scala"
   final val CLIENT_PROXY_CLASS = "com.mothy.letsmod2.proxy.ClientProxy"
   final val SERVER_PROXY_CLASS = "com.mothy.letsmod2.proxy.ServerProxy"
+  final val GuiFactoryClass = "com.mothy.letsmod2.client.gui.GuiFactory"
 
 
 }
