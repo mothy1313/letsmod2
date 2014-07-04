@@ -3,6 +3,7 @@ package com.mothy.letsmod2
 import com.mothy.letsmod2.handler.ConfigurationHandler
 import com.mothy.letsmod2.proxy.IProxy
 import com.mothy.letsmod2.reference.Reference
+import com.mothy.letsmod2.utility.LogHelper
 import cpw.mods.fml.common.{FMLCommonHandler, SidedProxy, Mod}
 import cpw.mods.fml.common.event.{FMLPostInitializationEvent, FMLPreInitializationEvent, FMLInitializationEvent}
 
@@ -22,18 +23,20 @@ object Letsmod2 {
     ConfigurationHandler.init(event.getSuggestedConfigurationFile)
     FMLCommonHandler.instance().bus().register(ConfigurationHandler)
 
+
+    LogHelper.info("Pre-initialisation complete")
   }
 
   @Mod.EventHandler
   def init(event: FMLInitializationEvent) {
 
-
+    LogHelper.info("Initialisation complete")
   }
 
   @Mod.EventHandler
   def postInit(event: FMLPostInitializationEvent){
 
-
+    LogHelper.info("Post-initialisation complete")
   }
 }
 
