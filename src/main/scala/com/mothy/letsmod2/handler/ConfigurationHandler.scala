@@ -12,13 +12,13 @@ object ConfigurationHandler {
 
   var testValue: Boolean = false
 
-  var configuration: Configuration = null
+  private var config: Option[Configuration] = None
 
   def init(configFile: File) {
 
-    if (configuration == null){
-      configuration = new Configuration(configFile)
-      loadConfiguration
+    if (config.isEmpty) {
+      config = Some(new Configuration(configFile))
+      syncConfig
     }
 
   }
@@ -27,19 +27,19 @@ object ConfigurationHandler {
   def onConfigurationChangedEvent(event: OnConfigChangedEvent):Unit = {
 
     if (event.modID == Reference.ModId){
-      loadConfiguration
+      syncConfig
     }
 
   }
 
-  private def loadConfiguration {
+  def configuration: Configuration = {
+    config.get
+  }
 
+  private def syncConfig: Unit = {
     testValue = configuration.get(Configuration.CATEGORY_GENERAL,"configValue", true, "Config value").getBoolean(true)
 
     if (configuration.hasChanged) configuration.save()
-
-
-
   }
 
 }
