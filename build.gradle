@@ -23,7 +23,7 @@ group= "com.mothy.letsmod2" // http://maven.apache.org/guides/mini/guide-naming-
 archivesBaseName = "modid"
 
 minecraft {
-    version = "1.7.10-10.13.0.1160"
+    version = "1.7.10-10.13.0.1179"
     assetDir = "eclipse/assets"
 }
 
