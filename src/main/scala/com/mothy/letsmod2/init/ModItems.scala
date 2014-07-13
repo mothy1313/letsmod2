@@ -1,10 +1,12 @@
 package com.mothy.letsmod2.init
 
 import com.mothy.letsmod2.item.{ItemMapleLeaf, ItemLM2}
+import com.mothy.letsmod2.reference.Reference
 import com.mothy.letsmod2.utility.LogHelper
 import cpw.mods.fml.common.registry.GameRegistry
 
 
+@GameRegistry.ObjectHolder(Reference.ModId)
 object ModItems {
 
   val mapleLeaf: ItemLM2 = new ItemMapleLeaf()

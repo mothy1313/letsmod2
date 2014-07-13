@@ -1,7 +1,7 @@
 package com.mothy.letsmod2
 
 import com.mothy.letsmod2.handler.ConfigurationHandler
-import com.mothy.letsmod2.init.ModItems
+import com.mothy.letsmod2.init.{ModBlocks, ModItems}
 import com.mothy.letsmod2.proxy.IProxy
 import com.mothy.letsmod2.reference.Reference
 import com.mothy.letsmod2.utility.LogHelper
@@ -26,6 +26,7 @@ object Letsmod2 {
 
 
     ModItems.init()
+    ModBlocks.init()
 
 
     LogHelper.info("Pre-initialisation complete")
