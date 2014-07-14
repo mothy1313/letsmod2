@@ -1,5 +1,6 @@
 package com.mothy.letsmod2.item
 
+import com.mothy.letsmod2.creativeTab.CreativeTabLM2
 import com.mothy.letsmod2.reference.Reference
 import com.mothy.letsmod2.utility.LogHelper
 import cpw.mods.fml.relauncher.{Side, SideOnly}
@@ -12,7 +13,7 @@ class ItemLM2 extends Item() {
 
   LogHelper.info("Initilising Item in ItemLM2")
 
-  this.setCreativeTab(CreativeTabs.tabMaterials)
+  this.setCreativeTab(CreativeTabLM2.LM2Tab)
 
 
 

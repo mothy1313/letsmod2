@@ -5,12 +5,12 @@ import cpw.mods.fml.relauncher.{SideOnly, Side}
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.client.renderer.texture.IIconRegister
-import net.minecraft.creativetab.CreativeTabs
+import com.mothy.letsmod2.creativeTab.CreativeTabLM2
 
 
 class BlockLM2(material: Material) extends Block(material){
 
-  this.setCreativeTab(CreativeTabs.tabBlock)
+  this.setCreativeTab(CreativeTabLM2.LM2Tab)
 
 
   def this()
